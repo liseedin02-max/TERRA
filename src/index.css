@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Manrope", sans-serif;
+
+  --color-terra-background: #fcf9f4;
+  --color-terra-primary: #91452c;
+  --color-terra-secondary: #5c614d;
+  --color-terra-tertiary: #6e5746;
+  --color-terra-surface: #f0ede8;
+  --color-terra-text: #1c1c19;
+  --color-terra-text-muted: #54433e;
+  --color-terra-outline: #87736c;
+
+  --radius-pulp: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  --radius-blob-1: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  --radius-blob-2: 70% 30% 30% 70% / 60% 40% 60% 40%;
+}
+
+@layer base {
+  body {
+    @apply bg-terra-background text-terra-text font-sans selection:bg-terra-primary/20 selection:text-terra-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.pulp-shape {
+  border-radius: var(--radius-pulp);
+}
+
+.organic-blob-1 {
+  border-radius: var(--radius-blob-1);
+}
+
+.organic-blob-2 {
+  border-radius: var(--radius-blob-2);
+}
+
+.soft-glow {
+  box-shadow: 0 20px 40px -15px rgba(145, 69, 44, 0.15);
+}
